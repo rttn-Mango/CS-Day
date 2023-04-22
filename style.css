@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+:root{
+    --bg-color-orange-sub: hsl(20, 81%, 46%);
+    --bg-color-gray-sub: hsl(34, 20%, 93%);
+    --extra-color-cream-sub: hsl(38, 97%, 70%);
+    --text-color-matteblue-primary: hsl(207, 42%, 35%);
+
+    --font-size-300: 0.75rem;
+    --font-size-400: 1rem;
+    --font-size-500: 1.15rem;
+    --font-size-600: 1.5rem;
+    --font-size-700: 2rem;
+    --font-size-800: 3rem;
+    --font-size-900: 6rem;
+    
+    --font-weight-500: 500;
+    --font-weight-600: 600;
+    --font-weight-700: 700;
+
+    --font-family: 'Montserrat', sans-serif;
+}
+
+
+/*CSS Reset*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-color-gray-sub);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/*Utility Classes*/
+.primary-heading{
+    --bg-color-orange-sub: hsl(20, 81%, 40%);
+    font-size: var(--font-size-900);
+    font-weight: var(--font-weight-700);
+    color: var(--bg-color-orange-sub);
+    font-style: italic;
+}
+
+.secondary-heading{
+    font-size: var(--font-size-600);
+    font-weight: var(--font-weight-600);
+    color: var(--text-color-white-sub);
+}
+
+.nav-utilities{
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: var(--font-size-500);
+    font-weight: var(--font-weight-600);
+}
+
+.bg-color-gray{
+    background-color: var(--bg-color-gray-sub);
+}
+
+.bg-color-orange{
+    background-color: var(--bg-color-orange-sub);
+}
+
+/*Styling*/
+.container{
+    max-width: 70%;
+    margin-inline: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo a {
+    margin: 1rem;
+}
+
+ul[role="list"]{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.flex-container{
+    display: flex;
+}
+
+.grid-container{
+    display: grid;
+}
+
+.auto-grid{
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 1rem;
+}
+
+.flex-row{
+    padding-block: 0.5rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-utilities li a{
+    color: var(--text-color-black-primary);
+}
+
+.nav-utilities li a:active{
+    color: var(--text-color-matteblue-primary);
+}
+
+.nav-utilities li a:hover {
+    color: var(--bg-color-orange-sub);
+}
+
+.banner-wrapper .event-banner img{
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.about{
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    padding: 5rem 0 1rem 0;
+    gap: 5rem;
+}
+
+.about p{
+    font-size: var(--font-size-500);
+    font-weight: var(--font-weight-500);
+}
+
+.cta{
+    padding: 5rem;
+}
+
+.button-link{
+    padding: 1rem;
+}
+
+.button-link a{
+    background-color:var(--extra-color-cream-sub);
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: 20rem;
+    font-size: var(--font-size-400);
+    font-weight: var(--font-weight-600);
+    color: var(--text-color-black-primary);
+}
+
+.button-link a:hover{
+    color: var(--bg-color-orange-sub);
+    opacity: 0.8;
+}
+
+.flex-wrap{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.creator{
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.creator img{
+    max-width: 5rem;
+}
+
+.team-logo img{
+    min-width: 5rem;
+    max-width: 10rem;
+}
+
+.footer-container{
+    padding: 5rem;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(0, 0%, 0%);
+    flex-direction: column;
+    font-size: var(--font-size-400);
+    font-weight: var(--font-weight-500);
+}
+
+.credits{
+    color: hsl(0, 0%, 87%);
+}
+
+.team-logo{
+    display: flex;
+    justify-content: center;
+}
+
+.team-logo{
+    padding-bottom: 1.5rem;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.card:hover{
+    filter: drop-shadow(5px 5px 5px var(--extra-color-cream-sub));
+}
+
+.toc-heading{
+    --font-size-900: 5.5rem;
+    font-size: var(--font-size-900);
+    text-align: center;
+    color: var(--text-color-matteblue-primary);
+}
+
+.crg-article{
+    padding: 5rem 1rem 5rem 1rem;
+}
+
+.crg-article p{
+    font-weight: var(--font-weight-500);
+    font-size: var(--font-size-400);
+}
+
+.paragraph-section{
+    font-weight: var(--font-weight-600);
+}
+
+.grg-heading{
+    font-size: var(--font-size-800);
+    text-align: center;
+    color: var(--text-color-matteblue-primary);
+}
+
+
+@media (max-width: 50em){
+    .primary-heading {
+        font-size: 3rem
+    }
+
+    .about {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .about p {
+        justify-self: start;
+        font-size: var(--font-size-400);
+        font-weight: var(--font-weight-500);
+    }
+
+    .creator {
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .flex-row{
+        flex-direction: column;
+    }
+
+    .nav-utilities {
+        font-size: var(--font-size-400);
+    }
+
+    ul[role="list"] {
+        gap: 1rem;
+    }
+
+    .flex-wrap {
+        justify-content: center;
+    }
+
+    .toc-heading {
+        text-align: center;
+        color: var(--text-color-matteblue-primary);
+    }
+
+    .auto-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+}
+
+@media (max-width: 26em){
+    .button-link{
+        margin-top: 1rem;
+        padding:0
+    }
+    
+    .button-link a {
+        padding: 0.5rem;
+        display: flex;
+        flex-wrap: nowrap;
+        border-radius: 10%;
+        text-align: center;
+    }
+
+    .cta {
+        text-align: center;
+    }
+
+    .nav-utilities {
+        font-size: var(--font-size-300);
+    }
+
+    ul[role="list"] {
+        gap: 0.5rem;
+    }
+
+    .primary-heading {
+        font-size: 2rem;
+    }
+
+    .about {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .toc-heading {
+        font-size: var(--font-size-600);
+        text-align: center;
+        color: var(--text-color-matteblue-primary);
+    }
+
+    .auto-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+}
+
+
+
